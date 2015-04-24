@@ -1,0 +1,318 @@
+﻿2015-04-24 11:21:56.012 INFO  DefaultFactory Logging to 'C:\Study\NSBHelloWorld\NSBHelloWorld\bin\Debug\' with level Debug
+2015-04-24 11:21:56.105 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'GatewayDeduplication' storage.
+2015-04-24 11:21:56.121 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Timeouts' storage.
+2015-04-24 11:21:56.121 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Sagas' storage.
+2015-04-24 11:21:56.121 INFO  NServiceBus.Persistence.PersistenceStartup Activating persistence 'RavenDBPersistence' to provide storage for 'Subscriptions' storage.
+2015-04-24 11:21:56.183 DEBUG NServiceBus.Features.ForwarderFaultManager Error queue retrieved from <MessageForwardingInCaseOfFaultConfig> element in config file.
+2015-04-24 11:21:56.215 DEBUG NServiceBus.Unicast.MessageHandlerRegistry Associated 'NServiceBus.Scheduling.Messages.ScheduledTask' message with 'NServiceBus.Scheduling.ScheduledTaskMessageHandler' handler
+2015-04-24 11:21:56.246 INFO  NServiceBus.Licensing.LicenseManager Trial for Particular Service Platform is still active, trial expires on 5/7/2015.
+2015-04-24 11:21:56.277 INFO  NServiceBus.Features.UnicastBus Number of messages found: 1
+2015-04-24 11:21:56.277 DEBUG NServiceBus.Features.UnicastBus Message definitions: 
+ MessageType: NServiceBus.Scheduling.Messages.ScheduledTask, Recoverable: True, TimeToBeReceived: Not set , Parent types: NServiceBus.Scheduling.Messages.ScheduledTask
+
+2015-04-24 11:21:56.418 DEBUG NServiceBus.Transports.Msmq.MsmqQueueCreator Checking if queue exists: audit@GH-DDDBG32.
+2015-04-24 11:21:56.465 ERROR NServiceBus.Transports.Msmq.MsmqQueueCreator Could not create queue audit@GH-DDDBG32 or check its existence. Processing will still continue.
+System.InvalidOperationException: Message Queuing has not been installed on this computer.
+   at System.Messaging.Interop.SafeNativeMethods.MQPathNameToFormatName(String pathName, StringBuilder formatName, Int32& count)
+   at System.Messaging.MessageQueue.ResolveFormatNameFromQueuePath(String queuePath, Boolean throwException)
+   at System.Messaging.MessageQueue.Exists(String path)
+   at NServiceBus.Transports.Msmq.MsmqQueueCreator.CreateQueueIfNecessary(Address address, String account) in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Transports\Msmq\MsmqQueueCreator.cs:line 46
+2015-04-24 11:21:56.465 DEBUG NServiceBus.Unicast.Queuing.QueuesCreator Verified that the queue: [audit@GH-DDDBG32] existed
+2015-04-24 11:21:56.480 DEBUG NServiceBus.Transports.Msmq.MsmqQueueCreator Checking if queue exists: NSBHelloWorld@GH-DDDBG32.
+2015-04-24 11:21:56.496 ERROR NServiceBus.Transports.Msmq.MsmqQueueCreator Could not create queue NSBHelloWorld@GH-DDDBG32 or check its existence. Processing will still continue.
+System.InvalidOperationException: Message Queuing has not been installed on this computer.
+   at System.Messaging.Interop.SafeNativeMethods.MQPathNameToFormatName(String pathName, StringBuilder formatName, Int32& count)
+   at System.Messaging.MessageQueue.ResolveFormatNameFromQueuePath(String queuePath, Boolean throwException)
+   at System.Messaging.MessageQueue.Exists(String path)
+   at NServiceBus.Transports.Msmq.MsmqQueueCreator.CreateQueueIfNecessary(Address address, String account) in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Transports\Msmq\MsmqQueueCreator.cs:line 46
+2015-04-24 11:21:56.496 DEBUG NServiceBus.Unicast.Queuing.QueuesCreator Verified that the queue: [NSBHelloWorld@GH-DDDBG32] existed
+2015-04-24 11:21:56.496 DEBUG NServiceBus.Transports.Msmq.MsmqQueueCreator Checking if queue exists: error@GH-DDDBG32.
+2015-04-24 11:21:56.527 ERROR NServiceBus.Transports.Msmq.MsmqQueueCreator Could not create queue error@GH-DDDBG32 or check its existence. Processing will still continue.
+System.InvalidOperationException: Message Queuing has not been installed on this computer.
+   at System.Messaging.Interop.SafeNativeMethods.MQPathNameToFormatName(String pathName, StringBuilder formatName, Int32& count)
+   at System.Messaging.MessageQueue.ResolveFormatNameFromQueuePath(String queuePath, Boolean throwException)
+   at System.Messaging.MessageQueue.Exists(String path)
+   at NServiceBus.Transports.Msmq.MsmqQueueCreator.CreateQueueIfNecessary(Address address, String account) in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Transports\Msmq\MsmqQueueCreator.cs:line 46
+2015-04-24 11:21:56.527 DEBUG NServiceBus.Unicast.Queuing.QueuesCreator Verified that the queue: [error@GH-DDDBG32] existed
+2015-04-24 11:21:56.543 INFO  NServiceBus.PerformanceMonitorUsersInstaller Did not attempt to add user 'MASTERCARD\e056691' to group 'Performance Monitor Users' since process is not running with elevate privileges. Processing will continue. To manually perform this action run the following command from an admin console:
+net localgroup "Performance Monitor Users" "MASTERCARD\e056691" /add
+2015-04-24 11:21:56.558 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: NServiceBus.Scheduling.Messages.ScheduledTask, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2015-04-24 11:21:56.558 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Handling property: TaskId
+2015-04-24 11:21:56.574 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2015-04-24 11:21:56.574 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Handling property: Name
+2015-04-24 11:21:56.574 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2015-04-24 11:21:56.574 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Handling property: Every
+2015-04-24 11:21:56.590 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2015-04-24 11:21:56.590 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: NServiceBus.EncryptedValue, NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c
+2015-04-24 11:21:56.590 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Handling property: EncryptedBase64Value
+2015-04-24 11:21:56.590 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2015-04-24 11:21:56.590 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Handling property: Base64Iv
+2015-04-24 11:21:56.590 DEBUG NServiceBus.Serializers.XML.XmlMessageSerializer Initializing type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+2015-04-24 11:21:56.605 INFO  NServiceBus.Features.DisplayDiagnosticsForFeatures ------------- FEATURES ----------------
+Name: CriticalErrorHandling
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Encryptor
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No encryption properties was found in available messages
+
+Name: ForwarderFaultManager
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: InMemoryFaultManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InstallationSupport
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: CriticalTimeMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Audit
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: AutoSubscribe
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: ApplySubscriptions
+
+Name: MsmqSubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: Scheduler
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: ForwardReceivedMessages
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: RegisterHandlersInOrder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: SLAMonitoring
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: LicenseReminder
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: Outbox
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: InMemoryGatewayPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: InMemoryOutboxPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Outbox]
+
+Name: InMemorySagaPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: InMemorySubscriptionPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [MessageDrivenSubscriptions]
+
+Name: InMemoryTimeoutPersistence
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager]
+
+Name: TimeoutManagerBasedDeferral
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: UnicastBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: BinarySerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BinarySerialization not enable since serialization definition not detected.
+
+Name: BsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -BsonSerialization not enable since serialization definition not detected.
+
+Name: JsonSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -JsonSerialization not enable since serialization definition not detected.
+
+Name: XmlSerialization
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: MsmqTransportConfigurator
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: TimeoutManager
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManagerBasedDeferral]
+
+Name: Sagas
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No sagas was found in scabbed types
+
+Name: SecondLevelRetries
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [ForwarderFaultManager]
+
+Name: DataBus
+Version: 5.0.0
+Enabled by Default: Yes
+Status: Disabled
+Deactivation reason: Did not fulfill its Prerequisites:
+   -No databus properties was found in available messages
+
+Name: StorageDrivenPublishing
+Version: 5.0.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: 
+
+Name: MessageDrivenSubscriptions
+Version: 5.0.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbGatewayDeduplication
+Version: 2.1.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Gateway]
+
+Name: SharedDocumentStore
+Version: 2.1.0
+Enabled by Default: No
+Status: Enabled
+Dependencies: None
+Startup Tasks: None
+
+Name: RavenDbStorageSession
+Version: 2.1.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [RavenDbSagaStorage]
+
+Name: RavenDbSagaStorage
+Version: 2.1.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [Sagas]
+
+Name: RavenDbSubscriptionStorage
+Version: 2.1.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [StorageDrivenPublishing],[SharedDocumentStore]
+
+Name: RavenDbTimeoutStorage
+Version: 2.1.0
+Enabled by Default: No
+Status: Disabled
+Deactivation reason: Did not meet one of the dependencies: [TimeoutManager],[SharedDocumentStore]
+
+
+2015-04-24 11:21:56.683 INFO  NServiceBus.Unicast.Transport.Monitoring.ReceivePerformanceDiagnostics NServiceBus performance counter for # of msgs successfully processed / sec is not set up correctly, no statistics will be emitted for the NSBHelloWorld queue. Execute the Install-NServiceBusPerformanceCounters cmdlet to create the counter.
+2015-04-24 11:21:57.152 ERROR NServiceBus.GenericHost Exception when starting endpoint.
+System.InvalidOperationException: Message Queuing has not been installed on this computer.
+   at System.Messaging.Interop.UnsafeNativeMethods.MQOpenQueue(String formatName, Int32 access, Int32 shareMode, MessageQueueHandle& handle)
+   at System.Messaging.MessageQueue.MQCacheableInfo.get_ReadHandle()
+   at System.Messaging.MessageQueue.StaleSafePurgeQueue()
+   at System.Messaging.MessageQueue.Purge()
+   at NServiceBus.Transports.Msmq.MsmqDequeueStrategy.Init(Address address, TransactionSettings settings, Func`2 tryProcessMessage, Action`2 endProcessMessage) in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Transports\Msmq\MsmqDequeueStrategy.cs:line 95
+   at NServiceBus.Unicast.Transport.TransportReceiver.StartReceiver() in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 215
+   at NServiceBus.Unicast.Transport.TransportReceiver.Start(Address address) in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Unicast\Transport\TransportReceiver.cs:line 180
+   at NServiceBus.Unicast.UnicastBus.Start() in c:\BuildAgent\work\1b05a2fea6e4cd32\src\NServiceBus.Core\Unicast\UnicastBus.cs:line 673
+   at NServiceBus.GenericHost.Start() in c:\BuildAgent\work\a3de8759ee491634\src\NServiceBus.Hosting.Windows\GenericHost.cs:line 60
