@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB229F5D-C1F1-4B22-9179-12DCD738767F}</ProjectGuid>
+    <ProjectGuid>{20123A31-FF02-448E-A99A-09CE1AE55A94}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NSBHelloWorld</RootNamespace>
-    <AssemblyName>NSBHelloWorld</AssemblyName>
+    <RootNamespace>NSBServer</RootNamespace>
+    <AssemblyName>NSBServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,21 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NServiceBus.5.2.0\lib\net45\NServiceBus.Core.dll</HintPath>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.5.0.0\lib\net45\NServiceBus.Core.dll</HintPath>
     </Reference>
     <Reference Include="NServiceBus.Host">
       <HintPath>..\packages\NServiceBus.Host.6.0.0\lib\net45\NServiceBus.Host.exe</HintPath>
     </Reference>
-    <Reference Include="NServiceBus.Log4Net">
-      <HintPath>..\packages\NServiceBus.Log4Net.1.0.0\lib\net45\NServiceBus.Log4Net.dll</HintPath>
-    </Reference>
     <Reference Include="NServiceBus.RavenDB">
-      <HintPath>..\packages\NServiceBus.RavenDB.2.1.0\lib\net45\NServiceBus.RavenDB.dll</HintPath>
+      <HintPath>..\packages\NServiceBus.RavenDB.2.2.0\lib\net45\NServiceBus.RavenDB.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\packages\RavenDB.Client.2.5.2916\lib\net45\Raven.Abstractions.dll</HintPath>
@@ -64,22 +57,16 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="EndpointConfig.cs" />
-    <Compile Include="MessageSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Message\Message.csproj">
-      <Project>{e229cdcb-2a27-40cb-9330-76f04087c50f}</Project>
-      <Name>Message</Name>
+    <ProjectReference Include="..\Messaages\Messaages.csproj">
+      <Project>{33173cfe-c3a8-48c9-85e1-db91f8915f00}</Project>
+      <Name>Messaages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -90,8 +77,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <StartAction>Program</StartAction>
-    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
-  </PropertyGroup>
 </Project>
