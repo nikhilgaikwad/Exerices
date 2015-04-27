@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NSBServer
+namespace Message
 {
-    public class Class1
+    [AttributeUsage(AttributeTargets.Property)]
+    class EncryptedAttribute : Attribute
     {
     }
 }

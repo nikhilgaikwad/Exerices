@@ -15,11 +15,18 @@ namespace NSBHelloWorld
 
         public void Start()
         {
-            var message = new RequestMessage {SaySomething = "Say something..."};
+            var message = new Request {SaySomething = "Say something..."};
             Bus.Send("helloWorldServer", message);
 
             LogManager.GetLogger("MessageSender").Info("Message Send...");
-                
+        }
+
+        public void Run()
+        {
+            Bus.OutgoingHeaders["user"] = "udi";
+            var message = new Request { SaySomething = "Say something" };
+            Bus.Send(message);
+            LogManager.GetLogger("MessageSender").Info("Sent message.");
         }
 
         public void Stop()
